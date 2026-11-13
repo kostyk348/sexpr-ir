@@ -47,14 +47,20 @@ AST читает **родной ридер Lisp**: `read-from-string` возвр
 ## Запуск
 
 ```bash
-SBCL_HOME=/usr/local/sbcl/lib sbcl --script ir.lisp
+SBCL_HOME=/usr/local/sbcl/lib sbcl --script run.lisp
 ```
+
+Прогон печатает корпус по каждой функции, сгенерированный C и замер
+скорости. Код выхода 0 — все случаи прошли, 1 — есть провалы.
 
 REPL:
 
 ```bash
 SBCL_HOME=/usr/local/sbcl/lib sbcl --load ir.lisp --eval '(sexpr-repl)'
 ```
+
+Внутри REPL: форма `(:function ...)` регистрирует функцию, `(c <форма>)`
+печатает C, `(run <имя>)` гоняет корпус, `(demo)` — демо, `exit` — выход.
 
 ## Реальные функции VibeDarling
 

@@ -1,0 +1,10 @@
+# черновики и артефакты прогонов
+part_*
+test-*.lisp
+sex.lisp
+debug.lisp
+archive/
+*.fas
+*.lib
+*.fasl
+compare/native
